@@ -1,34 +1,34 @@
 # Overview: prod
-*Last updated: 2026-08-10 22:03 IST*
-*Data range: 2026-05-15T16:03 to 2026-08-10T22:03 (20448 snapshots)*
+*Last updated: 2026-08-10 22:06 IST*
+*Data range: 2026-05-15T16:03 to 2026-08-10T22:06 (20449 snapshots)*
 
 ---
 
 ## All-Time Trend
 
-**Goroutines** (current: 14,550 | avg: 15,266 | max: 84,644 | trend: stable (-0.01/hr))
+**Goroutines** (current: 14,848 | avg: 15,266 | max: 84,644 | trend: stable (-0.01/hr))
 ```
-▂▂▁▂▁▂▃▁▁▁▁▁▃▁▁▂▁▁▃▂▂▁▁▁▂▁▁▁▁▁▂▁▁▁▁▁▂▁▁▁▁▁▂▂▁▁▁▁▄▂▁▁▁▁▂▁▁▁▁▁▆▂▁▁▁▁▂▂▁▁▂▂█▃▃▅▁▄▄▁▁▁▁▁▃▂▁▁▁▁▃▁▁▅▁▁
+▂▁▂▁▂▃▁▁▁▁▁▃▁▁▂▁▁▃▂▂▁▁▁▂▁▁▁▁▁▂▁▁▁▁▁▂▁▁▁▁▁▂▂▁▁▁▁▄▂▁▁▁▁▂▁▁▁▁▁▆▂▁▁▁▁▂▂▁▁▂▂█▃▃▅▁▄▄▁▁▁▁▁▃▂▁▁▁▁▃▁▁▅▁▁▂
 ```
 
-**Heap InUse** (current: 184.0MB | avg: 232.7MB | max: 3154.1MB | trend: stable (-0.01MB/hr))
+**Heap InUse** (current: 211.2MB | avg: 232.7MB | max: 3154.1MB | trend: stable (-0.01MB/hr))
 ```
-▄▃▃▅▄▅▄▃▃▃▄▃▅▄▃▄▅▄▅▅▃▃▂▃▅▃▃▃▃▄▄▃▃▅▂▅▆▄▄▂▄▁▄▂▃▃▂▂▅▄▂▁▂▁▂▁▂▁▂▂▆▃▃▃▁▁▃▂▁▂▂▃█▆▃▄▂▄▄▁▁▁▂▂▂▃▃▂▁▂▃▂▂▇▁▂
+▃▃▅▄▅▄▃▃▃▄▃▅▄▃▄▅▄▅▅▃▃▂▃▅▃▃▃▃▄▄▃▃▅▂▅▆▄▄▂▄▁▄▂▃▃▂▂▅▄▂▁▂▁▂▁▂▁▂▂▆▃▃▃▁▁▃▂▁▂▂▃█▆▃▄▂▄▄▁▁▁▂▂▂▃▃▂▁▂▃▂▂▇▁▂▃
 ```
 
 ## Current Status
 
 Goroutines: `███░░░░░░░░░░░░░░░░░ 17%`
-Heap InUse: `░░░░░░░░░░░░░░░░░░░░ 2%`
+Heap InUse: `░░░░░░░░░░░░░░░░░░░░ 3%`
 
 ## Metrics
 
 | Metric | Current | Prev | Delta | All-Time Avg | All-Time Max | Trend |
 |--------|---------|------|-------|-------------|-------------|-------|
-| Goroutines | 14,550 | 14,277 | +273 | 15,266 | 84,644 | stable (-0.01/hr) |
-| Heap InUse | 184.0MB | 144.3MB | +39.7MB | 232.7MB | 3154.1MB | stable (-0.01MB/hr) |
-| Heap Sys | 542.0MB | 542.8MB | -0.8MB | 1845.6MB | 6883.9MB | |
-| Heap Objects | 997,436 | 323,185 | +674251 | 1,019,537 | 17,165,538 | |
+| Goroutines | 14,848 | 14,550 | +298 | 15,266 | 84,644 | stable (-0.01/hr) |
+| Heap InUse | 211.2MB | 184.0MB | +27.2MB | 232.7MB | 3154.1MB | stable (-0.01MB/hr) |
+| Heap Sys | 541.9MB | 542.0MB | -0.1MB | 1845.5MB | 6883.9MB | |
+| Heap Objects | 1,115,011 | 997,436 | +117575 | 1,019,541 | 17,165,538 | |
 
 ## Daily Summary
 
@@ -121,37 +121,37 @@ Heap InUse: `░░░░░░░░░░░░░░░░░░░░ 2%`
 | 2026-08-07 | 288 | 14,934 | 193.4MB | 550.2MB |
 | 2026-08-08 | 287 | 14,599 | 180.8MB | 454.9MB |
 | 2026-08-09 | 286 | 14,942 | 213.1MB | 1389.5MB |
-| 2026-08-10 | 263 | 14,764 | 228.8MB | 821.5MB |
+| 2026-08-10 | 264 | 14,764 | 228.7MB | 821.5MB |
 
 ## Top Heap Consumers (latest snapshot)
 
 | # | Function | Flat |
 |---|----------|------|
 | 1 | `internal/audit.InitAuditLogWorkerPool.func1` | 36.63MB |
-| 2 | `dotlapse-event-service/workerpool.InitWorkerPool.func1` | 9.25MB |
-| 3 | `runtime.mallocgc` | 8.0MB |
-| 4 | `sirupsen/logrus.(*Entry).WithFields` | 6.5MB |
-| 5 | `compress/flate.NewWriter` | 4.41MB |
-| 6 | `bytes.growSlice` | 3.04MB |
-| 7 | `dotlapse-event-service/workerpool.NewRedisWorkerPool` | 2.31MB |
-| 8 | `dotlapse-event-service/workerpool.NewWorker` | 2.0MB |
-| 9 | `compress/flate.(*compressor).initDeflate` | 1.6MB |
-| 10 | `segmentio/kafka-go.makePartitions` | 1.51MB |
+| 2 | `bytes.growSlice` | 11.56MB |
+| 3 | `dotlapse-event-service/workerpool.InitWorkerPool.func1` | 9.25MB |
+| 4 | `runtime.mallocgc` | 8.0MB |
+| 5 | `dotlapse-event-service/Build.FilterByGivenBuildStatus` | 7.76MB |
+| 6 | `dotlapse-event-service/Build.FetchBuildsWithFilter` | 7.76MB |
+| 7 | `sirupsen/logrus.(*Entry).WithFields` | 6.5MB |
+| 8 | `crypto/tls.(*Conn).unmarshalHandshakeMessage` | 4.52MB |
+| 9 | `http2/hpack.(*headerFieldTable).addEntry` | 3.5MB |
+| 10 | `bufio.NewReaderSize` | 2.51MB |
 
 ## Top Alloc Consumers (latest snapshot)
 
 | # | Function | Flat |
 |---|----------|------|
-| 1 | `segmentio/kafka-go.makePartitions` | 6.2GB |
-| 2 | `fmt.Sprintf` | 4.41GB |
-| 3 | `reflect.unsafe_NewArray` | 3.17GB |
-| 4 | `dotlapse-event-service/testinfo.scanImagesFromRows` | 2.19GB |
-| 5 | `dotlapse-event-service/Build.FetchBuildsWithFilter` | 2.19GB |
-| 6 | `strconv.appendQuotedWith` | 2.15GB |
-| 7 | `fmt.Sprint` | 2.1GB |
-| 8 | `dotlapse-event-service/BackendComparison.CompareScreenshots` | 1.92GB |
-| 9 | `jackskj/carta.getUniqueId` | 1.87GB |
-| 10 | `reflect.MakeSlice` | 1.8GB |
+| 1 | `segmentio/kafka-go.makePartitions` | 6.25GB |
+| 2 | `fmt.Sprintf` | 4.44GB |
+| 3 | `reflect.unsafe_NewArray` | 3.19GB |
+| 4 | `dotlapse-event-service/Build.FetchBuildsWithFilter` | 2.64GB |
+| 5 | `dotlapse-event-service/testinfo.scanImagesFromRows` | 2.23GB |
+| 6 | `strconv.appendQuotedWith` | 2.17GB |
+| 7 | `fmt.Sprint` | 2.12GB |
+| 8 | `dotlapse-event-service/Build.FilterByGivenBuildStatus` | 2.11GB |
+| 9 | `dotlapse-event-service/BackendComparison.CompareScreenshots` | 1.93GB |
+| 10 | `jackskj/carta.getUniqueId` | 1.88GB |
 
 ## Feature Flag Function Tracking
 
@@ -159,46 +159,46 @@ _Always-monitored FF SDK + caller functions (regardless of top-N rank)._
 
 | Function (substring) | Alloc (current) | Alloc (prev) | Alloc (24h avg) | Heap InUse (current) |
 |----------------------|-----------------|--------------|-----------------|----------------------|
-| `evaluation.(*Engine).Evaluate` | 517.78MB | 503.70MB | 299.49MB | 0B |
-| `evaluation.mergeMetadata` | 253.56MB | 244.06MB | 150.50MB | 0B |
-| `local.(*Client).EvaluateV2` | 759.13MB | 740.42MB | 432.86MB | 0B |
-| `local.topologicalSort` | 104.30MB | 102.27MB | 57.99MB | 0B |
-| `localEvaluation.GetFeatureFlagByOrg` | 725.08MB | 707.86MB | 416.42MB | 0B |
-| `localEvaluation.GetFeatureFlagPayload` | 98.07MB | 96.06MB | 55.53MB | 0B |
-| `localEvaluation.getMapOfValue` | 725.08MB | 707.86MB | 416.42MB | 0B |
-| `utils.ParseFeatureFlag` | 727.58MB | 710.36MB | 417.49MB | 0B |
+| `evaluation.(*Engine).Evaluate` | 525.78MB | 517.78MB | 308.77MB | 0B |
+| `evaluation.mergeMetadata` | 259.56MB | 253.56MB | 155.03MB | 0B |
+| `local.(*Client).EvaluateV2` | 769.76MB | 759.13MB | 446.43MB | 0B |
+| `local.topologicalSort` | 104.80MB | 104.30MB | 59.77MB | 0B |
+| `localEvaluation.GetFeatureFlagByOrg` | 734.23MB | 725.08MB | 429.41MB | 0B |
+| `localEvaluation.GetFeatureFlagPayload` | 101.08MB | 98.07MB | 57.27MB | 0B |
+| `localEvaluation.getMapOfValue` | 734.23MB | 725.08MB | 429.41MB | 0B |
+| `utils.ParseFeatureFlag` | 736.74MB | 727.58MB | 430.53MB | 0B |
 
-**Total FF alloc (current snapshot):** 3.82GB  |  **24h avg:** 2.19GB
+**Total FF alloc (current snapshot):** 3.87GB  |  **24h avg:** 2.26GB
 
 ## Top Heap Contributors (average across all snapshots)
 
 | # | Function | Avg | Seen in | Bar |
 |---|----------|-----|---------|-----|
-| 1 | `internal/audit.InitAuditLogWorkerPool.func1` | 36.64MB | 20098/20448 | `███████████████ 100%` |
-| 2 | `runtime.mallocgc` | 22.86MB | 20098/20448 | `█████████░░░░░░ 62%` |
-| 3 | `dotlapse-event-service/project.ApplyPagination` | 18.5MB | 458/20448 | `███████░░░░░░░░ 50%` |
-| 4 | `dotlapse-event-service/project.FetchProjectFilterLegacy` | 17.31MB | 57/20448 | `███████░░░░░░░░ 47%` |
-| 5 | `dotlapse-event-service/project.FetchProjectFilter` | 17.13MB | 647/20448 | `███████░░░░░░░░ 46%` |
-| 6 | `dotlapse-event-service/project.applyPaginationLegacy` | 13.77MB | 34/20448 | `█████░░░░░░░░░░ 37%` |
-| 7 | `bytes.growSlice` | 12.15MB | 15693/20448 | `████░░░░░░░░░░░ 33%` |
-| 8 | `net/http.(*Transport).dialConn` | 11.58MB | 361/20448 | `████░░░░░░░░░░░ 31%` |
-| 9 | `internal/evaluation.mergeMetadata` | 10.44MB | 65/20448 | `████░░░░░░░░░░░ 28%` |
-| 10 | `dotlapse-event-service/utils.CheckImageExists` | 10.4MB | 20/20448 | `████░░░░░░░░░░░ 28%` |
+| 1 | `internal/audit.InitAuditLogWorkerPool.func1` | 36.64MB | 20099/20449 | `███████████████ 100%` |
+| 2 | `runtime.mallocgc` | 22.86MB | 20099/20449 | `█████████░░░░░░ 62%` |
+| 3 | `dotlapse-event-service/project.ApplyPagination` | 18.5MB | 458/20449 | `███████░░░░░░░░ 50%` |
+| 4 | `dotlapse-event-service/project.FetchProjectFilterLegacy` | 17.31MB | 57/20449 | `███████░░░░░░░░ 47%` |
+| 5 | `dotlapse-event-service/project.FetchProjectFilter` | 17.13MB | 647/20449 | `███████░░░░░░░░ 46%` |
+| 6 | `dotlapse-event-service/project.applyPaginationLegacy` | 13.77MB | 34/20449 | `█████░░░░░░░░░░ 37%` |
+| 7 | `bytes.growSlice` | 12.15MB | 15694/20449 | `████░░░░░░░░░░░ 33%` |
+| 8 | `net/http.(*Transport).dialConn` | 11.58MB | 361/20449 | `████░░░░░░░░░░░ 31%` |
+| 9 | `internal/evaluation.mergeMetadata` | 10.44MB | 65/20449 | `████░░░░░░░░░░░ 28%` |
+| 10 | `dotlapse-event-service/utils.CheckImageExists` | 10.4MB | 20/20449 | `████░░░░░░░░░░░ 28%` |
 
 ## Top Alloc Contributors (average across all snapshots)
 
 | # | Function | Avg | Seen in | Bar |
 |---|----------|-----|---------|-----|
-| 1 | `internal/evaluation.mergeMetadata` | 125.06GB | 388/20448 | `███████████████ 100%` |
-| 2 | `reflect.growslice` | 87.96GB | 18577/20448 | `██████████░░░░░ 70%` |
-| 3 | `segmentio/kafka-go.makePartitions` | 84.67GB | 19799/20448 | `██████████░░░░░ 67%` |
-| 4 | `jackskj/carta.getUniqueId` | 79.1GB | 18997/20448 | `█████████░░░░░░ 63%` |
-| 5 | `internal/evaluation.(*Engine).Evaluate` | 74.55GB | 393/20448 | `████████░░░░░░░ 59%` |
-| 6 | `experiment/local.(*Client).EvaluateV2` | 74.52GB | 393/20448 | `████████░░░░░░░ 59%` |
-| 7 | `dotlapse-event-service/BackendComparison.convertToImagePointers` | 73.55GB | 16342/20448 | `████████░░░░░░░ 58%` |
-| 8 | `reflect.unsafe_New` | 72.26GB | 18368/20448 | `████████░░░░░░░ 57%` |
-| 9 | `fmt.Sprintf` | 66.83GB | 19494/20448 | `████████░░░░░░░ 53%` |
-| 10 | `fmt.(*buffer).writeString` | 62.81GB | 17306/20448 | `███████░░░░░░░░ 50%` |
+| 1 | `internal/evaluation.mergeMetadata` | 125.06GB | 388/20449 | `███████████████ 100%` |
+| 2 | `reflect.growslice` | 87.96GB | 18577/20449 | `██████████░░░░░ 70%` |
+| 3 | `segmentio/kafka-go.makePartitions` | 84.67GB | 19800/20449 | `██████████░░░░░ 67%` |
+| 4 | `jackskj/carta.getUniqueId` | 79.09GB | 18998/20449 | `█████████░░░░░░ 63%` |
+| 5 | `internal/evaluation.(*Engine).Evaluate` | 74.55GB | 393/20449 | `████████░░░░░░░ 59%` |
+| 6 | `experiment/local.(*Client).EvaluateV2` | 74.52GB | 393/20449 | `████████░░░░░░░ 59%` |
+| 7 | `dotlapse-event-service/BackendComparison.convertToImagePointers` | 73.55GB | 16342/20449 | `████████░░░░░░░ 58%` |
+| 8 | `reflect.unsafe_New` | 72.26GB | 18368/20449 | `████████░░░░░░░ 57%` |
+| 9 | `fmt.Sprintf` | 66.83GB | 19495/20449 | `████████░░░░░░░ 53%` |
+| 10 | `fmt.(*buffer).writeString` | 62.81GB | 17306/20449 | `███████░░░░░░░░ 50%` |
 
 ## Alerts
 
