@@ -1,19 +1,19 @@
 # Overview: stage
-*Last updated: 2026-09-16 13:03 IST*
-*Data range: 2026-05-15T16:03 to 2026-09-16T13:03 (5916 snapshots)*
+*Last updated: 2026-09-16 13:33 IST*
+*Data range: 2026-05-15T16:03 to 2026-09-16T13:33 (5917 snapshots)*
 
 ---
 
 ## All-Time Trend
 
-**Goroutines** (current: 14,589 | avg: 14,243 | max: 80,146 | trend: stable (+0.13/hr))
+**Goroutines** (current: 14,620 | avg: 14,243 | max: 80,146 | trend: stable (+0.13/hr))
 ```
-▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▆▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▆▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
 ```
 
-**Heap InUse** (current: 110.4MB | avg: 154.6MB | max: 3034.2MB | trend: stable (-0.00MB/hr))
+**Heap InUse** (current: 142.4MB | avg: 154.6MB | max: 3034.2MB | trend: stable (-0.00MB/hr))
 ```
-▃▂▃▅▅▃▄▁▄▂▂▁▅▂▂▅▂▃▁▃▁▁▄▄▂▂▂▃▄▄▁▁▄█▃▁▄▃▂▂▁▂▂▅▅▂▄▂▂▃▅▄▄▃▁▄▃▁▁▅▅▁▄▁▂▁▁▃▁▂▄▁▁▂▁▃▁▂▂▃▂▆▂▃▂▂▄▁▂▄▄▄▂▂▂▁
+▂▃▅▅▃▄▁▄▂▂▁▅▂▂▅▂▃▁▃▁▁▄▄▂▂▂▃▄▄▁▁▄█▃▁▄▃▂▂▁▂▂▅▅▂▄▂▂▃▅▄▄▃▁▄▃▁▁▅▅▁▄▁▂▁▁▃▁▂▄▁▁▂▁▃▁▂▂▃▂▆▂▃▂▂▄▁▂▄▄▄▂▂▂▁▃
 ```
 
 ## Current Status
@@ -25,10 +25,10 @@ Heap InUse: `░░░░░░░░░░░░░░░░░░░░ 2%`
 
 | Metric | Current | Prev | Delta | All-Time Avg | All-Time Max | Trend |
 |--------|---------|------|-------|-------------|-------------|-------|
-| Goroutines | 14,589 | 14,633 | -44 | 14,243 | 80,146 | stable (+0.13/hr) |
-| Heap InUse | 110.4MB | 115.7MB | -5.3MB | 154.6MB | 3034.2MB | stable (-0.00MB/hr) |
-| Heap Sys | 436.5MB | 433.6MB | +2.9MB | 953.5MB | 5428.6MB | |
-| Heap Objects | 314,416 | 373,421 | -59005 | 867,941 | 10,300,177 | |
+| Goroutines | 14,620 | 14,589 | +31 | 14,243 | 80,146 | stable (+0.13/hr) |
+| Heap InUse | 142.4MB | 110.4MB | +32.0MB | 154.6MB | 3034.2MB | stable (-0.00MB/hr) |
+| Heap Sys | 435.5MB | 436.5MB | -1.0MB | 953.4MB | 5428.6MB | |
+| Heap Objects | 669,376 | 314,416 | +354960 | 867,908 | 10,300,177 | |
 
 ## Daily Summary
 
@@ -158,7 +158,7 @@ Heap InUse: `░░░░░░░░░░░░░░░░░░░░ 2%`
 | 2026-09-13 | 48 | 14,615 | 146.0MB | 317.8MB |
 | 2026-09-14 | 48 | 14,618 | 147.7MB | 271.7MB |
 | 2026-09-15 | 48 | 14,603 | 140.2MB | 239.2MB |
-| 2026-09-16 | 27 | 14,612 | 132.3MB | 206.8MB |
+| 2026-09-16 | 28 | 14,612 | 132.7MB | 206.8MB |
 
 ## Top Heap Consumers (latest snapshot)
 
@@ -168,27 +168,27 @@ Heap InUse: `░░░░░░░░░░░░░░░░░░░░ 2%`
 | 2 | `dotlapse-event-service/workerpool.InitWorkerPool.func1` | 9.25MB |
 | 3 | `runtime.mallocgc` | 6.5MB |
 | 4 | `sirupsen/logrus.(*Entry).WithFields` | 6.0MB |
-| 5 | `dotlapse-event-service/workerpool.NewRedisWorkerPool` | 2.85MB |
-| 6 | `compress/flate.(*fastGen).addBlock` | 2.69MB |
-| 7 | `compress/flate.NewWriter` | 2.56MB |
-| 8 | `segmentio/kafka-go.makePartitions` | 2.5MB |
-| 9 | `reflect.unsafe_NewArray` | 2.0MB |
-| 10 | `compress/flate.(*compressor).init` | 1.6MB |
+| 5 | `compress/flate.(*fastGen).addBlock` | 3.36MB |
+| 6 | `compress/flate.newFastEnc` | 2.86MB |
+| 7 | `dotlapse-event-service/workerpool.NewRedisWorkerPool` | 2.85MB |
+| 8 | `compress/flate.NewWriter` | 2.56MB |
+| 9 | `segmentio/kafka-go.makePartitions` | 2.0MB |
+| 10 | `reflect.mapassign_faststr0` | 1.5MB |
 
 ## Top Alloc Consumers (latest snapshot)
 
 | # | Function | Flat |
 |---|----------|------|
-| 1 | `segmentio/kafka-go.makePartitions` | 23.08GB |
-| 2 | `reflect.unsafe_NewArray` | 9.74GB |
-| 3 | `reflect.MakeSlice` | 5.43GB |
-| 4 | `segmentio/kafka-go.makeLayout` | 2.37GB |
+| 1 | `segmentio/kafka-go.makePartitions` | 23.88GB |
+| 2 | `reflect.unsafe_NewArray` | 10.07GB |
+| 3 | `reflect.MakeSlice` | 5.63GB |
+| 4 | `segmentio/kafka-go.makeLayout` | 2.45GB |
 | 5 | `go-redis/redis.(*cmdable).Scan` | 1.8GB |
-| 6 | `v3/newrelic.newAnalyticsEvents` | 1.33GB |
-| 7 | `internal/reflectlite.unsafe_New` | 1.09GB |
-| 8 | `dotlapse-event-service/Build.FetchBuildsWithFilter` | 1.0GB |
-| 9 | `dotlapse-event-service/Build.FilterByGivenBuildStatus` | 846.42MB |
-| 10 | `v3/newrelic.newLogEvents` | 761.52MB |
+| 6 | `v3/newrelic.newAnalyticsEvents` | 1.37GB |
+| 7 | `internal/reflectlite.unsafe_New` | 1.13GB |
+| 8 | `dotlapse-event-service/Build.FetchBuildsWithFilter` | 1.02GB |
+| 9 | `dotlapse-event-service/Build.FilterByGivenBuildStatus` | 855.56MB |
+| 10 | `v3/newrelic.newLogEvents` | 785.64MB |
 
 ## Feature Flag Function Tracking
 
@@ -196,46 +196,46 @@ _Always-monitored FF SDK + caller functions (regardless of top-N rank)._
 
 | Function (substring) | Alloc (current) | Alloc (prev) | Alloc (24h avg) | Heap InUse (current) |
 |----------------------|-----------------|--------------|-----------------|----------------------|
-| `evaluation.(*Engine).Evaluate` | 168.23MB | 155.56MB | 66.59MB | 0B |
-| `evaluation.mergeMetadata` | 77.02MB | 70.02MB | 29.02MB | 0B |
-| `local.(*Client).EvaluateV2` | 281.61MB | 259.44MB | 111.47MB | 0B |
-| `local.topologicalSort` | 35.60MB | 33.05MB | 14.79MB | 0B |
-| `localEvaluation.GetFeatureFlagByOrg` | 264.94MB | 245.84MB | 107.41MB | 0B |
-| `localEvaluation.GetFeatureFlagPayload` | 45.46MB | 40.83MB | 15.57MB | 0B |
-| `localEvaluation.getMapOfValue` | 264.94MB | 245.84MB | 107.41MB | 0B |
-| `utils.ParseFeatureFlag` | 265.95MB | 246.85MB | 107.75MB | 0B |
+| `evaluation.(*Engine).Evaluate` | 186.77MB | 168.23MB | 66.58MB | 0B |
+| `evaluation.mergeMetadata` | 83.52MB | 77.02MB | 29.02MB | 0B |
+| `local.(*Client).EvaluateV2` | 312.80MB | 281.61MB | 111.63MB | 0B |
+| `local.topologicalSort` | 38.14MB | 35.60MB | 14.53MB | 0B |
+| `localEvaluation.GetFeatureFlagByOrg` | 298.64MB | 264.94MB | 108.07MB | 0B |
+| `localEvaluation.GetFeatureFlagPayload` | 47.56MB | 45.46MB | 15.24MB | 0B |
+| `localEvaluation.getMapOfValue` | 298.64MB | 264.94MB | 108.07MB | 0B |
+| `utils.ParseFeatureFlag` | 299.65MB | 265.95MB | 108.44MB | 0B |
 
-**Total FF alloc (current snapshot):** 1.37GB  |  **24h avg:** 560.02MB
+**Total FF alloc (current snapshot):** 1.53GB  |  **24h avg:** 561.56MB
 
 ## Top Heap Contributors (average across all snapshots)
 
 | # | Function | Avg | Seen in | Bar |
 |---|----------|-----|---------|-----|
-| 1 | `internal/audit.InitAuditLogWorkerPool.func1` | 36.63MB | 5913/5916 | `███████████████ 100%` |
-| 2 | `dotlapse-event-service/project.fetchPathsByProjectId` | 33.75MB | 1/5916 | `█████████████░░ 92%` |
-| 3 | `internal/http2.(*Framer).startWriteDataPadded` | 30.55MB | 2/5916 | `████████████░░░ 83%` |
-| 4 | `dotlapse-event-service/project.FetchProjectFilter` | 20.33MB | 131/5916 | `████████░░░░░░░ 55%` |
-| 5 | `dotlapse-event-service/project.ApplyPagination` | 19.61MB | 72/5916 | `████████░░░░░░░ 53%` |
-| 6 | `net/http.(*Transport).queueForIdleConn` | 18.63MB | 9/5916 | `███████░░░░░░░░ 50%` |
-| 7 | `net/http.(*Transport).tryPutIdleConn` | 17.43MB | 6/5916 | `███████░░░░░░░░ 47%` |
-| 8 | `dotlapse-event-service/api.scanImagesFromRows` | 15.27MB | 1/5916 | `██████░░░░░░░░░ 41%` |
-| 9 | `database/sql.convertAssignRows` | 14.49MB | 138/5916 | `█████░░░░░░░░░░ 39%` |
-| 10 | `crypto/tls.Client` | 14.43MB | 12/5916 | `█████░░░░░░░░░░ 39%` |
+| 1 | `internal/audit.InitAuditLogWorkerPool.func1` | 36.63MB | 5914/5917 | `███████████████ 100%` |
+| 2 | `dotlapse-event-service/project.fetchPathsByProjectId` | 33.75MB | 1/5917 | `█████████████░░ 92%` |
+| 3 | `internal/http2.(*Framer).startWriteDataPadded` | 30.55MB | 2/5917 | `████████████░░░ 83%` |
+| 4 | `dotlapse-event-service/project.FetchProjectFilter` | 20.33MB | 131/5917 | `████████░░░░░░░ 55%` |
+| 5 | `dotlapse-event-service/project.ApplyPagination` | 19.61MB | 72/5917 | `████████░░░░░░░ 53%` |
+| 6 | `net/http.(*Transport).queueForIdleConn` | 18.63MB | 9/5917 | `███████░░░░░░░░ 50%` |
+| 7 | `net/http.(*Transport).tryPutIdleConn` | 17.43MB | 6/5917 | `███████░░░░░░░░ 47%` |
+| 8 | `dotlapse-event-service/api.scanImagesFromRows` | 15.27MB | 1/5917 | `██████░░░░░░░░░ 41%` |
+| 9 | `database/sql.convertAssignRows` | 14.49MB | 138/5917 | `█████░░░░░░░░░░ 39%` |
+| 10 | `crypto/tls.Client` | 14.43MB | 12/5917 | `█████░░░░░░░░░░ 39%` |
 
 ## Top Alloc Contributors (average across all snapshots)
 
 | # | Function | Avg | Seen in | Bar |
 |---|----------|-----|---------|-----|
-| 1 | `segmentio/kafka-go.makePartitions` | 88.19GB | 5890/5916 | `███████████████ 100%` |
-| 2 | `experiment/local.(*Client).EvaluateV2` | 63.79GB | 321/5916 | `██████████░░░░░ 72%` |
-| 3 | `internal/evaluation.(*Engine).Evaluate` | 63.11GB | 322/5916 | `██████████░░░░░ 71%` |
-| 4 | `internal/evaluation.mergeMetadata` | 62.61GB | 316/5916 | `██████████░░░░░ 70%` |
-| 5 | `dotlapse-event-service/project.ApplyPagination` | 49.23GB | 2996/5916 | `████████░░░░░░░ 55%` |
-| 6 | `reflect.unsafe_NewArray` | 37.94GB | 5862/5916 | `██████░░░░░░░░░ 43%` |
-| 7 | `experiment/local.topologicalSort` | 34.21GB | 295/5916 | `█████░░░░░░░░░░ 38%` |
-| 8 | `lambda-featureflag-go-sdk/localEvaluation.getMapOfValue` | 34.13GB | 301/5916 | `█████░░░░░░░░░░ 38%` |
-| 9 | `dotlapse-event-service/project.FetchProjectFilter` | 21.53GB | 2991/5916 | `███░░░░░░░░░░░░ 24%` |
-| 10 | `reflect.MakeSlice` | 21.45GB | 5811/5916 | `███░░░░░░░░░░░░ 24%` |
+| 1 | `segmentio/kafka-go.makePartitions` | 88.18GB | 5891/5917 | `███████████████ 100%` |
+| 2 | `experiment/local.(*Client).EvaluateV2` | 63.79GB | 321/5917 | `██████████░░░░░ 72%` |
+| 3 | `internal/evaluation.(*Engine).Evaluate` | 63.11GB | 322/5917 | `██████████░░░░░ 71%` |
+| 4 | `internal/evaluation.mergeMetadata` | 62.61GB | 316/5917 | `██████████░░░░░ 71%` |
+| 5 | `dotlapse-event-service/project.ApplyPagination` | 49.23GB | 2996/5917 | `████████░░░░░░░ 55%` |
+| 6 | `reflect.unsafe_NewArray` | 37.94GB | 5863/5917 | `██████░░░░░░░░░ 43%` |
+| 7 | `experiment/local.topologicalSort` | 34.21GB | 295/5917 | `█████░░░░░░░░░░ 38%` |
+| 8 | `lambda-featureflag-go-sdk/localEvaluation.getMapOfValue` | 34.13GB | 301/5917 | `█████░░░░░░░░░░ 38%` |
+| 9 | `dotlapse-event-service/project.FetchProjectFilter` | 21.53GB | 2991/5917 | `███░░░░░░░░░░░░ 24%` |
+| 10 | `reflect.MakeSlice` | 21.45GB | 5812/5917 | `███░░░░░░░░░░░░ 24%` |
 
 ## Alerts
 
